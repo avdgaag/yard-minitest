@@ -1,0 +1,26 @@
+<% if object[:tests] %>
+<div class="tests">
+  <h2>Unit Tests</h2>
+  <ul class="see">
+  <% object[:tests].each do |test| %>
+    <li>
+      <%= test[:description] %>
+      <span class="showSource">[<a href="#" class="toggleSource">Show source</a>]</span>
+      <div class="source_code">
+        <table>
+          <tbody>
+            <tr>
+              <td><pre class="lines"><%= test[:source].lines.each_with_index.map { |_, i| test[:line] + i }.join("\n") %></pre></td>
+                <td><pre class="code">
+<span class="info file"># File '<%= test[:file] %>', line <%= test[:line] %></span>
+<%= html_syntax_highlight format_source test[:source] %>
+              </pre></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  <% end %>
+</ul>
+</div>
+<% end %>

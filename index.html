@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Yard-minitest by avdgaag</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Yard-minitest</h1>
+        <p>Include Minitest test case descriptions in your class documentation.</p>
+        <p class="view"><a href="https://github.com/avdgaag/yard-minitest">View the Project on GitHub <small>avdgaag/yard-minitest</small></a></p>
+        <ul>
+          <li><a href="https://github.com/avdgaag/yard-minitest/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/avdgaag/yard-minitest/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/avdgaag/yard-minitest">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="yardminitest" class="anchor" href="#yardminitest"><span class="octicon octicon-link"></span></a>YARD::Minitest</h1>
+
+<p>Parse Minitest files to read all the test case descriptions and include those
+with the relevant classes in your YARD documentation. This works for both
+ActiveSupport-style <code>test</code> blocks and regular old <code>def test_</code> methods. Test
+cases get listed at the bottom of your class documentation and include the
+test source code, file name and line numbers.</p>
+
+<p><strong>This is very much a toy project to play with YARD plugins.</strong> If you find it
+useful then pull requests are welcome.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">gem</span> <span class="s1">'yard-minitest'</span>
+</pre></div>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install yard-minitest
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>YARD::Minitest is a YARD plugin, so you can activate it explicitly when you run
+<code>yardoc</code>:</p>
+
+<pre><code>$ yardoc --plugin minitest
+</code></pre>
+
+<p>Alternatively, you can have YARD always look for any installed plugin by setting
+its <code>load_plugins</code> configuration:</p>
+
+<pre><code>$ yard config load_plugins true
+</code></pre>
+
+<p>Remember to include your test files when documenting your project; otherwise
+your tests will not be found.</p>
+
+<pre><code>$ yardoc app/**/*.rb test/**/*.rb
+</code></pre>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it ( <a href="https://github.com/avdgaag/yard-minitest/fork">https://github.com/avdgaag/yard-minitest/fork</a> )</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/avdgaag">avdgaag</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20357800-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
